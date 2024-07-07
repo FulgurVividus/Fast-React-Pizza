@@ -8,3 +8,8 @@ This folder is for reusable code for interacting with API.
 #3. utils folder: 
 These are helper functions that we can also reuse in multiple places of the application.
 Reusable and stateless helper functions that don't create any side effects (like: date or number manipulations...).
+
+#4 A whole new way of Routing:
+This is the recommended router for all React Router web projects to work with powerful APIs like Data Loader, Data Actions or Data Fetchers.
+
+Example: App.jsx

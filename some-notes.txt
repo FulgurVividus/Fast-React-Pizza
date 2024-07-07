@@ -13,3 +13,13 @@ Reusable and stateless helper functions that don't create any side effects (like
 This is the recommended router for all React Router web projects to work with powerful APIs like Data Loader, Data Actions or Data Fetchers.
 
 Example: App.jsx
+
+#5. Architecture of App Layout:
+So, the Header and Footer would stay the same across the whole application, only Main will change according to pages (like: Cart, Menu or Order...).
+
+#6. Nested Routes:
+The AppLayout.jsx is a 'parent Route' of all routes, inside it we have <Outlet /> which is the placeholder for 'child routes'. The 'child routes' are in the 'children' property of the 'router'. Now they are nested routes.
+
+<AppLayout /> - since it doesn't have a 'path', it is technically called 'Layout Route'.
+
+Example: App.jsx file

@@ -1,0 +1,10 @@
+#1. ui folder:
+Will contain reusable UI components (like: buttons, inputs...).
+Mostly they are just presentational and don't contain side effects.
+
+#2. services folder:     
+This folder is for reusable code for interacting with API.
+
+#3. utils folder: 
+These are helper functions that we can also reuse in multiple places of the application.
+Reusable and stateless helper functions that don't create any side effects (like: date or number manipulations...).

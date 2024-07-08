@@ -32,6 +32,7 @@ Three steps:
 
 useLoaderData() - helps to get the data into the component.
 
+'loader' is for reading data.
 'loader' can be placed anywhere in the code base, but convention is to place loader for the data of the certain page inside the file of that page. Loader function must return whatever data it wants to provide to a page.
 
 The concept is - rendering a page and fetching data happens at the same time.
@@ -59,3 +60,15 @@ To get the id from URL right into getOrder() function in Order.jsx, don't use us
 'params.orderID' is because we gave the name 'orderID' in routes of <Order />, App.jsx file.
 
 Example: Order.jsx
+
+#11. Writing Data with React Router 'Actions':
+'Actions' are used to write or mutate data, so the state that is stored on some server.
+Or in other words, 'actions' allow us to manage this remote server state using 'action' functions and 'form' that we then wire up to routes similar to what we did earlier with the 'loader'.
+
+Whenever this <Form>...</Form> will be submitted, behind the scenes React Router will then call this 'action' function and it'll pass the request that was submitted.
+
+Connected this 'action' with "/order/new" route in App.jsx. Whenever there will be a new form submission on this "/order/new" route, the 'action' that we specified will be called. 
+
+So this makes easy to get the data out of the form into 'action' function.
+
+Example: CreateOrder.jsx and connected in App.jsx

@@ -42,3 +42,11 @@ Example: step_1. Menu.jsx, step_2. App.jsx, step_3. Menu.jsx
 useNavigation() - shows a global loading indicator, no matter what data is being loaded.
 
 Example: AppLayout.jsx file
+
+#9. Handling Errors with Error Elements:
+The errors that happen in the 'nested routes', they will bubble up to the 'parent route'.
+
+To get the actual error message that happened inside React Router => useRouteError().
+The Error.jsx component gets the access to the error happened.
+
+Example: App.jsx and Error.jsx

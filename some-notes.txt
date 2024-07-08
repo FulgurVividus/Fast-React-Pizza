@@ -30,8 +30,15 @@ Three steps:
 2. connect the loader function with the route
 3. provide the data to the page (by using custom hook => useLoaderData())
 
+useLoaderData() - helps to get the data into the component.
+
 Can be placed anywhere in the code base, but convention is to place loader for the data of the certain page inside the file of that page. Loader function must return whatever data it wants to provide to a page.
 
 Rendering a page and fetching data happens at the same time.
 
-Example: step_1. Menu.jsx, step_2. App.jsx, step_3. 
+Example: step_1. Menu.jsx, step_2. App.jsx, step_3. Menu.jsx
+
+#8. Global Navigation State:
+useNavigation() - shows a global loading indicator, no matter what data is being loaded.
+
+Example: AppLayout.jsx file

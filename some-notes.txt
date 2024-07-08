@@ -23,3 +23,15 @@ The AppLayout.jsx is a 'parent Route' of all routes, inside it we have <Outlet /
 <AppLayout /> - since it doesn't have a 'path', it is technically called 'Layout Route'.
 
 Example: App.jsx file
+
+#7. Fetching data with React Router:
+Three steps:
+1. create a loader function
+2. connect the loader function with the route
+3. provide the data to the page (by using custom hook => useLoaderData())
+
+Can be placed anywhere in the code base, but convention is to place loader for the data of the certain page inside the file of that page. Loader function must return whatever data it wants to provide to a page.
+
+Rendering a page and fetching data happens at the same time.
+
+Example: step_1. Menu.jsx, step_2. App.jsx, step_3. 

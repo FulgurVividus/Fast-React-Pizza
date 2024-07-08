@@ -28,18 +28,20 @@ Example: App.jsx file
 Three steps:
 1. create a loader function
 2. connect the loader function with the route
-3. provide the data to the page (by using custom hook => useLoaderData())
+3. provide the data to the component (page) (by using custom hook => useLoaderData())
 
 useLoaderData() - helps to get the data into the component.
 
-Can be placed anywhere in the code base, but convention is to place loader for the data of the certain page inside the file of that page. Loader function must return whatever data it wants to provide to a page.
+'loader' can be placed anywhere in the code base, but convention is to place loader for the data of the certain page inside the file of that page. Loader function must return whatever data it wants to provide to a page.
 
-Rendering a page and fetching data happens at the same time.
+The concept is - rendering a page and fetching data happens at the same time.
 
 Example: step_1. Menu.jsx, step_2. App.jsx, step_3. Menu.jsx
 
 #8. Global Navigation State:
 useNavigation() - shows a global loading indicator, no matter what data is being loaded.
+
+Better to place in 'navigation.state' in AppLayout.jsx so to make it universal for entire application.
 
 Example: AppLayout.jsx file
 
@@ -50,3 +52,10 @@ To get the actual error message that happened inside React Router => useRouteErr
 The Error.jsx component gets the access to the error happened.
 
 Example: App.jsx and Error.jsx
+
+#10. Fetching Orders:
+To get the id from URL right into getOrder() function in Order.jsx, don't use useParams() as it does work only in components. React Router passes some data in 'loader' function, and one of properties of the object that 'loader' receives is 'params'.
+
+'params.orderID' is because we gave the name 'orderID' in routes of <Order />, App.jsx file.
+
+Example: Order.jsx

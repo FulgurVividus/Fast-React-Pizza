@@ -79,3 +79,6 @@ In App.jsx CreateOrder component is connected with createOrderAction, so therefo
 useActionData() - it's for any data coming from 'action'. The most common use case is returning some errors that we can display in the UI.
 
 Example: CreateOrder.jsx
+
+#13. tailwind prettier extension 
+After u done with Tailwind integration to the project, google the above and also install following instructions.

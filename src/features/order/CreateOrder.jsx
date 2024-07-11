@@ -36,7 +36,7 @@ const fakeCart = [
 
 function CreateOrder() {
   const username = useSelector((state) => state.user.username);
-  const upperFirstLetterUsername = username.replace(
+  const upperFirstLetterUsername = username?.replace(
     username[0],
     username[0].toUpperCase(),
   );

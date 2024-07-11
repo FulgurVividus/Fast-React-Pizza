@@ -85,3 +85,8 @@ After u done with Tailwind integration to the project, google the above and also
 
 #14. Redux Toolkit installation:
 npm i @reduxjs/toolkit react-redux
+
+#15. DefaultValue:
+It's one of important props. It basically allows us to set a default value at the beginning, but which we can then still change. This is not a controlled element, just a simple HTML element.
+
+Example: CreateOrder.jsx file "First Name" input

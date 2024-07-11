@@ -82,3 +82,6 @@ Example: CreateOrder.jsx
 
 #13. tailwind prettier extension 
 After u done with Tailwind integration to the project, google the above and also install following instructions.
+
+#14. Redux Toolkit installation:
+npm i @reduxjs/toolkit react-redux

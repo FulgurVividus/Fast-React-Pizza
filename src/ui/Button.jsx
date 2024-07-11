@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Button({ children, disabled, to, type, soldOut }) {
+function Button({ children, disabled, to, type, soldOut, onClick }) {
   const base = `inline-block rounded-full bg-yellow-400 font-semibold uppercase text-sm tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2 disabled:cursor-not-allowed ${!soldOut ? "" : "cursor-not-allowed"}`;
 
   const styles = {
@@ -17,6 +17,14 @@ function Button({ children, disabled, to, type, soldOut }) {
       <Link to={to} className={styles[type]}>
         {children}
       </Link>
+    );
+  }
+
+  if (onClick) {
+    return (
+      <button disabled={disabled} className={styles[type]} onClick={onClick}>
+        {children}
+      </button>
     );
   }
 

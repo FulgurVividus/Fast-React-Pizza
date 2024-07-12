@@ -98,3 +98,8 @@ But better practice is to place in the 'slice' file itself, so this function sho
 NOTE: This way may have some bad effects on the performance in larger applications. Consider to use 'reselect' library to fix this issue.
 
 Example: cartSlice.jsx file and CartOverview.jsx file
+
+#17. caseReducers:
+Allows to reuse the 'reducer' inside 'Slice' instead of repeating the logic from scratch.
+
+Example: cartSlice.js inside decreaseItemQuantity reducer

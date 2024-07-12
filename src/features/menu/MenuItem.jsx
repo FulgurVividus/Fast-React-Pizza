@@ -10,7 +10,7 @@ function MenuItem({ pizza }) {
 
   function handleAddToCart() {
     const newItem = {
-      pizzaID: id,
+      pizzaId: id,
       name: name,
       quantity: 1,
       unitPrice: unitPrice,

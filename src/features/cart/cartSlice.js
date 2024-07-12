@@ -13,19 +13,19 @@ const cartSlice = createSlice({
       state.cart.push(action.payload);
     },
     deleteItem(state, action) {
-      // payload = pizzaID
-      state.cart = state.cart.filter((item) => item.pizzaID !== action.payload);
+      // payload = pizzaId
+      state.cart = state.cart.filter((item) => item.pizzaId !== action.payload);
     },
     increaseItemQuantity(state, action) {
-      // payload = pizzaID
-      const item = state.cart.find((item) => item.pizzaID === action.payload);
+      // payload = pizzaId
+      const item = state.cart.find((item) => item.pizzaId === action.payload);
 
       item.quantity++;
       item.totalPrice = item.quantity * item.unitPrice;
     },
     decreaseItemQuantity(state, action) {
       // payload = pizzaID
-      const item = state.cart.find((item) => item.pizzaID === action.payload);
+      const item = state.cart.find((item) => item.pizzaId === action.payload);
 
       item.quantity--;
       item.totalPrice = item.quantity * item.unitPrice;

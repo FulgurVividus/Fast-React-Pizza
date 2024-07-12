@@ -103,3 +103,12 @@ Example: cartSlice.jsx file and CartOverview.jsx file
 Allows to reuse the 'reducer' inside 'Slice' instead of repeating the logic from scratch.
 
 Example: cartSlice.js inside decreaseItemQuantity reducer
+
+#18. Redux Thunks with createAsyncThunk:
+createAsyncThunk() - receives 2 things, action_name and async function that will return the payload for reducer later.
+
+createAsyncThunk() - will produce 3 additional action types: 'pending' promise state, 'fulfilled' state, 'rejected' state. These cases must be handled separately in 'reducers', so this how we connect the Thunk with 'reducers'.
+
+The names for async Thunks must NOT be called with 'get'.
+
+NOTE: 'fetchAddress' will become tha 'Action Creator' function that will later be called in the code.

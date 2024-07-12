@@ -36,10 +36,6 @@ const fakeCart = [
 
 function CreateOrder() {
   const username = useSelector((state) => state.user.username);
-  const upperFirstLetterUsername = username?.replace(
-    username[0],
-    username[0].toUpperCase(),
-  );
 
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
@@ -62,8 +58,8 @@ function CreateOrder() {
           <input
             type="text"
             name="customer"
-            className="input grow"
-            defaultValue={upperFirstLetterUsername}
+            className="input grow uppercase"
+            defaultValue={username}
             required
           />
         </div>

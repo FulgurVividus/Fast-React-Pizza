@@ -10,11 +10,6 @@ function Cart() {
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
 
-  const upperFirstLetterUsername = username?.replace(
-    username[0],
-    username[0].toUpperCase(),
-  );
-
   if (!cart.length) {
     return <EmptyCart />;
   }
@@ -24,7 +19,7 @@ function Cart() {
       <LinkButton to="/menu">&larr; Back to menu</LinkButton>
 
       <h2 className="mt-7 text-xl font-semibold">
-        Your cart, {upperFirstLetterUsername}
+        Your cart, <span className="uppercase">{username}</span>
       </h2>
 
       <ul className="mt-3 divide-y divide-stone-200 border-b">

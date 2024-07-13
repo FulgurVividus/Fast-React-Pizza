@@ -117,3 +117,7 @@ NOTE: 'fetchAddress' will become tha 'Action Creator' function that will later b
 It allows to fetch the data without going/navigating to the page where the data is coming from.
 
 Example: Order.jsx, the data is coming from Menu.jsx 'loader'
+
+In order to update/write the data we do NOT use fetcher.load() like in Order.jsx, but 'Form' component provided by useFetcher. It will not navigate away, it just submits the 'Form' and then revalidate the page.
+
+Example: UpdateOrder.jsx

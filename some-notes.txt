@@ -112,3 +112,8 @@ createAsyncThunk() - will produce 3 additional action types: 'pending' promise s
 The names for async Thunks must NOT be called with 'get'.
 
 NOTE: 'fetchAddress' will become tha 'Action Creator' function that will later be called in the code.
+
+#19. useFetcher():
+It allows to fetch the data without going/navigating to the page where the data is coming from.
+
+Example: Order.jsx, the data is coming from Menu.jsx 'loader'
